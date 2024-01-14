@@ -9,6 +9,8 @@ while(sinal != "+" && sinal != "-" && sinal != "*" && sinal != "/") { // Valida�
 }
 
 var numberB = prompt("Digite um número...") // Segundo número
+numberA = parseInt(numberA) // Verificar se o input do usuário é mesmo um número.
+numberB = parseInt(numberB)
 
 function soma(a, b) { // Função de realizar a operação a partir do caractere escolhido pelo usuário passando os números como parâmetro
    if(sinal == "+"){  // para dentro da função
@@ -25,4 +27,4 @@ function soma(a, b) { // Função de realizar a operação a partir do caractere
         return alert(`O resultado é: ${result}`)
     }
 }
-soma(numberA, numberB) // Chamando a função com os números selecionados pelo usuário como parâmetro na função
+soma(numberA, numberB)   // Chamando a função com os números selecionados pelo usuário como parâmetro na função
