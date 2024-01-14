@@ -32,3 +32,7 @@ alertUser.printAge(22)      // O resultado aparecerá o 22 como sendo o valor do
 
 // Neste exemplo podemos interagir com outras funções já instanciadas como exemplo a shirt1 de exemplo anterior
 alertUser.printAge(`john de 22 anos está vestindo uma camisa ${shirt.color} de tamanho ${shirt1.size}`)
+
+// OBS: Este era um jeito mais antigo de se utilizar functions para criar objetos, o javascript já possui classes com constructor para
+// suprir esta demanda e então assim não sendo necessário mais criar objetos desta maneira, mas para case de estudo é sempre bom saber 
+// como as coisas eram e como evolui no passar do tempo.
