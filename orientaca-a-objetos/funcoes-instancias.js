@@ -14,3 +14,21 @@ console.log(shirt.color)   // Veremos o mesmo valor da anterior porém é uma ou
 
 shirt1.color = "black"     // Podemos alterar o valor da chave do objeto dentro da função instanciada pela variável shirt1
 console.log(shirt1.color)  // Veremos assim então o novo valor que será black.
+
+function AlertUser() {          
+    this.name = "John"        // com o resto da função como exemplo pegando o próprio atributo name.
+    this.printName = function() { // Podemos fazer com funções também dentro deste escopo podendo interagir
+        alert(this.name)
+    }
+
+    this.printAge = function(age) { // Podemos passar parâmetros dentro da função como exemplo age
+        alert(age)
+    }
+}
+
+const alertUser = new AlertUser() 
+alertUser.printName()       // Chamando a função e mostrando o valor de name da function instanciada
+alertUser.printAge(22)      // O resultado aparecerá o 22 como sendo o valor do parâmetro da function printAge
+
+// Neste exemplo podemos interagir com outras funções já instanciadas como exemplo a shirt1 de exemplo anterior
+alertUser.printAge(`john de 22 anos está vestindo uma camisa ${shirt.color} de tamanho ${shirt1.size}`)
