@@ -13,6 +13,14 @@ elementsWrapperClass[0].style.backgroundColor = "white"   // Através do index n
 for(var i = 0; i < elementsWrapperClass.length; i++) {    // Fazendo um loop de for podemos atribui o mesmo valor para várias classes.
    var el = elementsWrapperClass[i]
    el.style.border = "solid 1px blue"
-}
+}                                                          
 
-                                                                   
+const classAll = document.querySelectorAll('.box')   // Com querySelectorAll selecionamos várias classes com a sintaxe de invocar as classes
+                                                     // e id`s no CSS como exemplo .box, assim podemos novamente manipular várias objetos da
+console.log(classAll);                               // da DOM através de um loop como no exemplo.
+
+for(var i = 0; i < classAll.length; i++) {
+    var cls = classAll[i]
+
+    cls.innerHTML = "Manipulado via js"
+}
