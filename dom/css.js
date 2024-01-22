@@ -7,7 +7,7 @@ elementWrapperId.style.backgroundColor = "gray"
 elementWrapperId.style.textAlign = "center"
 
 const elementsWrapperClass = document.getElementsByClassName('box') // Podemos utilizar classes para pegar as tags podendo assim selecionar 
-                                                                   // várias de um só vez.
+                                                                   // várias de uma só vez.
 elementsWrapperClass[0].style.backgroundColor = "white"   // Através do index no array manipulamos a classe.
 
 for(var i = 0; i < elementsWrapperClass.length; i++) {    // Fazendo um loop de for podemos atribui o mesmo valor para várias classes.
@@ -22,5 +22,5 @@ console.log(classAll);                               // da DOM através de um lo
 for(var i = 0; i < classAll.length; i++) {
     var cls = classAll[i]
 
-    cls.innerHTML = "Manipulado via js"
+    cls.innerHTML = "Manipulado via js"               // Podemos injetar valores dentro das classes através do innerHTML
 }

@@ -5,10 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curso javascript</title>
 
-        <script src="/dom/css.js" defer ></script>
+        <script src="/dom/animacoes.js" defer ></script>
     </head>
 
     <body style="background-color: black; display: flex; flex-direction: column; gap: 20px;">
+        <style>
+            .box {
+                width: 150px;
+                height: 150px;
+                background-color: blue;
+            }
+            .showBox {
+                transition: 5s;
+                background-color: yellow;
+                margin-left: 50%;
+            }
+        </style>
         <div id="wrapper" > 
             <p>conteúdo da tag p</p>
             <p>conteúdo da tag p 1</p>
