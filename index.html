@@ -5,39 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curso javascript</title>
 
-        <script src="/dom/animacoes.js" defer ></script>
+        <script src="/dom/animacoes2.js" defer ></script>
     </head>
 
     <body style="background-color: black; display: flex; flex-direction: column; gap: 20px;">
         <style>
-            .box {
-                width: 150px;
-                height: 150px;
-                background-color: blue;
+            .paragraph {
+                height: 15px;
+                overflow: hidden;
             }
-            .showBox {
-                transition: 5s;
-                background-color: yellow;
-                margin-left: 50%;
+            .showParagraph {
+                overflow: auto;
+                transition: 2s;
             }
         </style>
-        <div id="wrapper" > 
-            <p>conteúdo da tag p</p>
-            <p>conteúdo da tag p 1</p>
-            <p>conteúdo da tag p 2</p>
-            <p>conteúdo da tag p 3</p>
-        </div>
-        <div  class="box"> 
-            <p>conteúdo da tag p</p>
-            <p>conteúdo da tag p 1</p>
-            <p>conteúdo da tag p 2</p>
-            <p>conteúdo da tag p 3</p>
-        </div>
-        <div  class="box"> 
-            <p>conteúdo da tag p</p>
-            <p>conteúdo da tag p 1</p>
-            <p>conteúdo da tag p 2</p>
-            <p>conteúdo da tag p 3</p>
+        <div>
+            <h1 class="title">Sistema solar <span style="font-size: 12px; margin-left: 80px; cursor: pointer;" class="showParagraphButton">Ver mais...</span></h1>
+            <p class="paragraph">O Sistema Solar compreende o conjunto constituído pelo Sol e todos os corpos celestes que estão sob seu domínio gravitacional. A estrela central, maior componente do sistema (respondendo por mais de 99% de sua massa), gera sua energia através da fusão de hidrogênio em hélio, dois de seus principais constituintes. Os quatro planetas mais próximos do Sol (Mercúrio, Vênus, Terra e Marte) possuem em comum uma crosta sólida e rochosa, razão pela qual se definem como o grupo dos planetas telúricos. Mais afastados, os quatro gigantes gasosos, Júpiter, Saturno, Urano e Netuno, são os componentes de maior massa do sistema logo após o próprio Sol. Dos cinco planetas anões, Ceres é o que se localiza mais próximo do centro do Sistema Solar, enquanto todos os outros, Plutão, Haumea, Éris e Makemake, se encontram além da órbita de Netuno.</p>
         </div>
 
         
