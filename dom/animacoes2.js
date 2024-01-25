@@ -1,15 +1,14 @@
-const buttonShowParagraph = document.querySelector('.showParagraphButton')
+// ----------------------------- ANIMAÇÕES 2  ---------------------------------------
+const buttonShow = document.querySelector('.showParagraphButton') // Atribui a variável buttonShow o ver mais do html
 
-buttonShowParagraph.addEventListener('click', handleParagraph())
+buttonShow.addEventListener('click', ()=> {              // Colocamos o evento de click para que assim execute uma function 
+    let paragraph = document.querySelector('.paragraph') // Pegamos o paragrafo do HTML
 
-function handleParagraph() {
-    var contentParagraph = document.getElementsByClassName('.paragraph')
-    
-if(contentParagraph.classList.contains('showParagraph')) {
-    handleParagraph.classList.remove('showParagraph');
-    buttonShowParagraph.innerHTML = 'Ver mais...'
-} else {
-    handleParagraph.classList.add('showParagraph')
-    buttonShowParagraph.innerHTML = 'ocultar'
-}
-}
+    if(paragraph.classList.contains('showParagraph')) {  // Fazemos uma condicional para mostra o texto inteiro do parágrafo
+        buttonShow.innerHTML = "ver mais..."             // ou para diminuir e mostrar apenas a primeira linha.
+        paragraph.classList.remove('showParagraph')
+    } else {
+        buttonShow.innerHTML = "ver menos"               // Também alteramos através do innerHTML o conteúdo do span para que
+        paragraph.classList.add('showParagraph')         // fique mais claro para o usuário o que vai acontecer ao clicar 
+    }
+})
