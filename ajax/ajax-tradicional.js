@@ -13,10 +13,10 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')   // Colocamos a url da bu
 // Podemos também enviar dados pela requisição fetch com o método post
 fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',                             // Definimos o método post para enviar dados
-    body: JSON.stringify({                      // Pelo BODY passamos o conteúdo
+    body: JSON.stringify({                   
         title: 'foo',
-        body: 'bar',
-        userId: 13,
+        body: 'bar',                            // Pelo BODY passamos o conteúdo
+        userId: 1,
     }),
     headers: {                                  // Qualquer cabeçalho que queira adicionar a requisição acompanhado de um objeto
         'Content-type': 'application/json; charset=UTF-8',
@@ -25,3 +25,21 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 })
 .then(Response => Response.json())                      // A promessa é resolvida para o objeto Response
 .then(json => console.log(json))
+
+// Método patch para atualizar algum dado pela requisição
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: 1,
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+  
