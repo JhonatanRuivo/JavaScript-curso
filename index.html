@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso javascript</title>
 
-    <script src="/ajax/lista-meu-github.js" defer></script>
+    <script src="/apps/lista-mercado.js" defer></script>
   </head>
 
   <body>
@@ -71,8 +71,8 @@
         list-style: none;
         border-bottom: solid 1px #01161e; 
       }
-      .price {
-        background-color: #aec3b0;
+      .item-price {
+        background-color: #eff6e0;
         padding: 8px 24px;
         border-radius: 24px;
       }
@@ -89,14 +89,14 @@
       <h1>APP LISTA DO SUPERMERCADO</h1>
     </header>
     <main>
-      <form class="form-add-item">
-        <input class="input-item" id="input-text" type="text" placeholder="Nome do item">
-        <input class="input-item" id="input-price" type="number" placeholder="R$ - Valor">
+      <form class="form-add-item" action="">
+        <input class="input-item" id="input-name" type="text" placeholder="Nome do item">
+        <input class="input-item" id="input-price" type="number" step="0.01" min="0.99" placeholder="R$ - Valor">
         <button class="add-button" type="submit">Adicionar</button>
       </form>
       
         <ul class="list-items">
-          <li class="item">Pão<strong class="price">R$5,50</strong></li>
+          <li class="item"> <p class="item-name" ></p><strong class="item-price">R$</strong></li>
         </ul>
         <div class="total">
           <h3>Total:</h3>
@@ -104,4 +104,4 @@
         </div>
     </main>
   </body>
-</html>
+</html> 

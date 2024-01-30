@@ -15,8 +15,7 @@ fetch(myRequest)
       const repos = data[i]
 
       const lisItem = document.createElement('li') // Incrementamos a variável de tag li dentro de myList
-      lisItem.appendChild(document.createElement('strong')).textContent =
-        repos.name // Incrementamos o nome do repositório dentro de uma
+      lisItem.appendChild(document.createElement('strong')).textContent = repos.name // Incrementamos o nome do repositório dentro de uma
       // tag strong na variável listItem
       myList.appendChild(lisItem) // Por fim incrementamos a listItem na nossa ul myList
     }
