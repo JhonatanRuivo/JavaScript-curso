@@ -16,7 +16,6 @@ form.addEventListener('submit', (e) => {
   })
 
   let listItems = document.querySelector('.list-items') // Adicionamos a uma variável a tag <ul> do html
-  let totalValueItems = document.querySelector('.total-value-items') // Neste pegaremos a tag que receberá a soma dos preços
   let sumTotalItems = 0
   listItems.innerHTML = '' // A cada submit atribuímos vazio para colocar um novo item na lista
   items.map((val) => {
@@ -26,11 +25,14 @@ form.addEventListener('submit', (e) => {
     <p class="item-name"> - ${val.name} </p>
     <strong class="item-price">R$ ${val.price}</strong>
   </li>` // Incrementamos no html o conteúdo para formar a lista com nome do item e preço
-    totalValueItems.innerHTML = `R$: ${sumTotalItems}`
   })
 
+  sumTotalItems = sumTotalItems.toFixed(2)
   inputName.value = '' // Zeramos os valores nos inputs para melhor experiência do usuário
   inputPrice.value = ''
+
+  let totalValueItems = document.querySelector('.total-value-items') // Neste pegaremos a tag que receberá a soma dos preços
+  totalValueItems.innerHTML = `R$: ${sumTotalItems}`
 })
 
 // CÓDIGO HTML DESTE TRECHO DE JAVASCRIPT
