@@ -4,121 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso javascript</title>
-
-    <script src="/apps/lista-mercado.js" defer></script>
+    <script src="" defer></script>
   </head>
-
   <body>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        height: 100vh;
-        width: 100vw;
-        background: linear-gradient(
-          90deg,
-          rgba(174, 195, 176, 1) 25%,
-          rgba(89, 131, 146, 1) 100%
-        );
-        color: #01161e;
-      }
-      header {
-        background-color: #01161e;
-        color: #eff6e0;
-        height: 120px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-      main {
-        padding: 40px;
-      }
-      .form-add-item {
-        display: flex;
-        gap: 40px;
-      }
-      .input-item {
-        background: rgba(255, 255, 255, 0.55);
-        height: 40px;
-        width: 100%;
-        padding: 8px;
-        border: none;
-        border-radius: 8px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        color: #01161e;
-      }
-      .add-button {
-        padding: 8px 24px;
-        border-radius: 8px;
-        border: none;
-        background-color: #124559;
-        color: #eff6e0;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      .player-options img,
+      .enemy-options img {
+        max-width: 200px;
+        opacity: 0.3;
         cursor: pointer;
       }
-      .list-items {
-        margin-top: 40px;
-        width: 100%;
-        height: auto;
-        font-size: 22px;
+
+      .player-options,
+      .enemy-options {
+        width: 50%;
       }
-      .item {
-        padding: 16px;
+
+      .align {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        list-style: none;
-        border-bottom: solid 1px #01161e;
-      }
-      .item-price {
-        background-color: #eff6e0;
-        padding: 8px 24px;
-        border-radius: 24px;
-      }
-      .total {
-        margin-top: 40px;
-        font-size: 22px;
-        display: flex;
-        gap: 40px;
-        align-items: center;
       }
     </style>
-    <header>
-      <h1>APP LISTA DO SUPERMERCADO</h1>
-    </header>
-    <main>
-      <form class="form-add-item" action="">
-        <input
-          class="input-item"
-          id="input-name"
-          type="text"
-          placeholder="Nome do item"
-        />
-        <input
-          class="input-item"
-          id="input-price"
-          type="number"
-          step="0.01"
-          min="0.99"
-          placeholder="R$ - Valor"
-        />
-        <button class="add-button" type="submit">Adicionar</button>
-      </form>
-
-      <ul class="list-items">
-        <!-- <li class="item">
-          <p class="item-name"></p>
-          <strong class="item-price"></strong>
-        </li> -->
-      </ul>
-      <div class="total">
-        <h3>Total:</h3>
-        <strong class="total-value-items">R$ 00,00</strong>
+    <h1 style="text-align: center">Pedra, papel ou tesoura!</h1>
+    <hr />
+    <div class="align">
+      <div class="player-options">
+        <div><img title="rock" opt="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
+        <div><img title="paper" opt="paper" src="./apps/pedrapapeltesoura/paper.png" /></div>
+        <div><img title="scissor" opt="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
       </div>
-    </main>
+      <div class="enemy-options">
+        <div><img title="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
+        <div><img title="paper" src="./apps/pedrapapeltesoura/paper.png" /></div>
+        <div><img title="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
+      </div>
+    </div>
+    <script>
+      
+    </script>
   </body>
 </html>
