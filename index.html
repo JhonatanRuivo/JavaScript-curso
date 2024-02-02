@@ -6,26 +6,62 @@
     <title>Curso javascript</title>
     <script src="./apps/papel-pedra-tesoura.js" defer></script>
   </head>
-  <body>
+  <body> 
     <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(180deg, #ededed, #adadad);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        color: #363636;
+      }
+      h1 {
+        width: 50%;
+        padding: 8px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        background-color: #c8c8c8;
+        box-shadow: 0px 5px 15px 0px #363636 ;
+      }
+      
+      .result-show {
+        padding: 8px;
+        border-radius: 8px;
+        border: solid 1px #363636;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        box-shadow: 0px 5px 15px 0px #7b7b7b ;
+      }
       .player-options img,
       .enemy-options img {
         max-width: 200px;
         opacity: 0.3;
+      }
+      .player-options {
         cursor: pointer;
       }
-
-      .player-options,
-      .enemy-options {
-        width: 50%;
+      .player-options img:hover {
+        scale: 1.1;
+        transition: 250ms
       }
 
       .align {
+        width: 100%;
         display: flex;
+        justify-content: space-around;
       }
     </style>
-    <h1 style="text-align: center">Pedra, papel ou tesoura!</h1>
-    <hr />
+    <h1>Pedra, papel ou tesoura!</h1>
+    <h3 class="result"></h3>
     <div class="align">
       <div class="player-options">
         <div><img title="rock" opt="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
@@ -33,13 +69,11 @@
         <div><img title="scissor" opt="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
       </div>
       <div class="enemy-options">
-        <div><img title="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
-        <div><img title="paper" src="./apps/pedrapapeltesoura/paper.png" /></div>
-        <div><img title="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
+        <div><img title="rock" opt="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
+        <div><img title="paper" opt="paper" src="./apps/pedrapapeltesoura/paper.png" /></div>
+        <div><img title="scissor" opt="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
       </div>
     </div>
-    <script>
-      
-    </script>
+    <script></script>
   </body>
 </html>
