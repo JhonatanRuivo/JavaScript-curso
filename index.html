@@ -4,76 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso javascript</title>
-    <script src="./apps/papel-pedra-tesoura.js" defer></script>
+    <script src="./apps/pokedex.js" defer></script>
   </head>
-  <body> 
+  <body>
     <style>
-      *{
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
+      HTML {
+        background-color: black;
+      }
       body {
-        background: linear-gradient(180deg, #ededed, #adadad);
+        background-image: url('/apps/pokedex/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.7;
+        width: 100%;
+        height: auto;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
-        color: #363636;
+        justify-content: center;
+        padding-top: 10px;
+        background-attachment: fixed;
+      }
+      main {
+        width: 80%;
+        background: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        border-radius: 16px;
+        border: solid 1px white;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
       }
       h1 {
-        width: 50%;
-        padding: 8px;
-        border-radius: 8px;
-        display: flex;
-        justify-content: center;
-        background-color: #c8c8c8;
-        box-shadow: 0px 5px 15px 0px #363636 ;
+        border-radius: 16px 16px 0 0;
+        color: white;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
       }
-      
-      .result-show {
-        padding: 8px;
-        border-radius: 8px;
-        border: solid 1px #363636;
-        display: flex;
-        justify-content: center;
-        background-color: transparent;
-        box-shadow: 0px 5px 15px 0px #7b7b7b ;
-      }
-      .player-options img,
-      .enemy-options img {
-        max-width: 200px;
-        opacity: 0.3;
-      }
-      .player-options {
-        cursor: pointer;
-      }
-      .player-options img:hover {
-        scale: 1.1;
-        transition: 250ms
-      }
-
-      .align {
+      .cards {
+        padding-top: 16px;
+        height: fit-content;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+      .card {
+        background-color: white;
+        width: 220px;
+        height: 250px;
+        border-radius: 16px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+      }
+      img {
+        width: 65%;
       }
     </style>
-    <h1>Pedra, papel ou tesoura!</h1>
-    <h3 class="result"></h3>
-    <div class="align">
-      <div class="player-options">
-        <div><img title="rock" opt="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
-        <div><img title="paper" opt="paper" src="./apps/pedrapapeltesoura/paper.png" /></div>
-        <div><img title="scissor" opt="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
+    <main>
+      <h1>POKEDEX</h1>
+      <div class="cards">
+        <div class="card">
+          <img class="image-pokemon" src="" alt="imagem do pokemon" />
+          <strong class="name-pokemon"></strong>
+        </div>
+        <div class="card">
+          <img class="image-pokemon" src="" alt="imagem do pokemon" />
+          <strong class="name-pokemon"></strong>
+        </div>
+        <div class="card">
+          <img class="image-pokemon" src="" alt="imagem do pokemon" />
+          <strong class="name-pokemon"></strong>
+        </div>
+        <div class="card">
+          <img class="image-pokemon" src="" alt="imagem do pokemon" />
+          <strong class="name-pokemon"></strong>
+        </div>
+        <div class="card">
+          <img class="image-pokemon" src="" alt="imagem do pokemon" />
+          <strong class="name-pokemon"></strong>
+        </div>
       </div>
-      <div class="enemy-options">
-        <div><img title="rock" opt="rock" src="./apps/pedrapapeltesoura/rock.png" /></div>
-        <div><img title="paper" opt="paper" src="./apps/pedrapapeltesoura/paper.png" /></div>
-        <div><img title="scissor" opt="scissor" src="./apps/pedrapapeltesoura/scissor.png" /></div>
-      </div>
-    </div>
-    <script></script>
+    </main>
   </body>
 </html>
