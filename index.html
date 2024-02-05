@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso javascript</title>
-    <script src="./apps/pokedex.js" defer></script>
+    <script src="./apps/perguntas-e-respostas.js" defer></script>
   </head>
   <body>
-    
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+      .answers {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+    <main>
+      <h2>Descrição da pergunta</h2>
+      <div class="answers">
+        <div>
+          <input id="question-1" type="radio" value="correct" /> <label for="question-1">Opção 1 de resposta</label>
+        </div>
+        <div>
+          <input id="question-2" type="radio" value="incorrect" /> <label for="question-2">Opção 2 de resposta</label>
+        </div>
+        <div>
+          <input id="question-3" type="radio" value="incorrect" /> <label for="question-3">Opção 3 de resposta</label>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
