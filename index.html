@@ -16,18 +16,26 @@
         display: flex;
         flex-direction: column;
       }
+      .options {
+        width: fit-content;
+        border-radius: 16px;
+        padding: 8px;
+      }
     </style>
     <main>
       <h2>Descrição da pergunta</h2>
       <div class="answers">
-        <div>
-          <input id="question-1" type="radio" value="correct" /> <label for="question-1">Opção 1 de resposta</label>
+        <div class="options">
+          <input id="response-1" type="radio" name="question-1" value="correct" />
+          <label for="response-1">Opção 1 de resposta</label>
         </div>
-        <div>
-          <input id="question-2" type="radio" value="incorrect" /> <label for="question-2">Opção 2 de resposta</label>
+        <div class="options">
+          <input id="response-2" type="radio" name="question-1" value="incorrect" />
+          <label for="response-2">Opção 2 de resposta</label>
         </div>
-        <div>
-          <input id="question-3" type="radio" value="incorrect" /> <label for="question-3">Opção 3 de resposta</label>
+        <div class="options">
+          <input id="response-3" type="radio" name="question-1" value="incorrect" />
+          <label for="response-3">Opção 3 de resposta</label>
         </div>
       </div>
     </main>
